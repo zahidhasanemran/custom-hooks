@@ -1,22 +1,26 @@
 import React, {useState} from 'react';
+import useToggle from '../custom-hooks/useToggle';
+
 
 function Counter(props) {
 
-    const [isHappy, setHappy] = useState(true);
-    const toggleHappy = () => {
-        setHappy(!isHappy);
-    }
+    const [isHappy, setHappy] = useToggle(true);
+    // const toggleHappy = () => {
+    //     setHappy(!isHappy);
+    // }
 
-    const [inLove, setLove] =  useState(false);
-    const toggleLove = () => {
-        setLove(!inLove);
-    }
+    const [inLove, setLove] =  useToggle(false);
+    // const toggleLove = () => {
+    //     setLove(!inLove);
+    // }
+
+    
   
 
     return (
         <div>
-            <h1 onClick={toggleHappy}>{isHappy ? "Happy" : "UnHappy" }</h1>
-            <h1 onClick={toggleLove}>{inLove ? "In Love" : "Single" }</h1>
+            <h1 onClick={setHappy}>{isHappy ? "Happy" : "UnHappy" }</h1>
+            <h1 onClick={setLove}>{inLove ? "In Love" : "Single" }</h1>
         </div>
     );
 }
