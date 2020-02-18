@@ -1,12 +1,15 @@
 import React from 'react';
-import Counter from './Component/Counter';
+import SingleForm from './Component/singleForm';
+// import Counter from './Component/Counter';
+
 
 function App() {
 
   
   return (
     <div className="App">
-      <Counter></Counter>
+      {/* <Counter></Counter> */}
+      <SingleForm/>
     </div>
   );
 }
